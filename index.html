@@ -117,10 +117,22 @@ body, html {
       <p><a href="#PREVIOUS EDITION" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Previous Edition</a></p>
     </div>
     <div class="w3-col m6">
-      <img class="w3-image w3-round-large" src="images/logo.jpg" alt="logo" width="400" height="400" style="margin-left: 15%;">
+      <img class="w3-image w3-round-large desktop-margin" src="images/logo.jpg" alt="SICSS-AMU/Law" width="400" height="400">
     </div>
   </div>
 </div>
+
+<style>
+  .desktop-margin {
+    margin-left: 0;
+  }
+
+  @media screen and (min-width: 992px) {
+    .desktop-margin {
+      margin-left: 15%;
+    }
+  }
+</style>
 
 <!-- Team Section -->
 <div class="w3-container" style="padding:128px 16px" id="team">
