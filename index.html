@@ -27,6 +27,46 @@ body, html {
 .w3-bar .w3-button {
   padding: 16px;
 }
+
+/* Style for window */
+        .modal {
+            display: none; /* Ukryte domyślnie */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+
+        /* Style for content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        /* Style for closing button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
 </style>
 </head>
 <body>
@@ -37,6 +77,7 @@ body, html {
     <a href="#home" class="w3-bar-item w3-button w3-wide">SICSS-AMU\Law</a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
+      <a href="#news" class="w3-bar-item w3-button">NEWS</a>
       <a href="#about" class="w3-bar-item w3-button">ABOUT US</a>
       <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
       <a href="#EVENTS" class="w3-bar-item w3-button"><i class="fa fa-calendar"></i> EVENTS</a>
@@ -54,6 +95,7 @@ body, html {
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#news" class="w3-bar-item w3-button">NEWS</a>
   <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT US</a>
   <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
   <a href="#EVENTS" onclick="w3_close()" class="w3-bar-item w3-button">EVENTS</a>
@@ -76,6 +118,55 @@ body, html {
     <i class="fa-brands fa-linkedin"></i></a>
   </div>
 </header>
+
+<!-- NEWS -->
+<div class="w3-container" style="padding:64px 16px 0px 16px" id="news">
+  <h3 class="w3-center">NEWS</h3>
+  <p class="w3-center w3-large">Check Out What’s New With Us!</p>
+  <hr>
+  <!-- Container -->
+  <div class="w3-row-padding w3-grayscale" style="margin-top:64px; overflow-x: auto; white-space: nowrap;">
+
+    <div class="w3-col l4 m12 w3-margin-bottom" style="display: inline-block; float: none; white-space: normal; vertical-align: top;">
+      <div class="w3-card">
+        <div class="w3-container">
+          <h3>Welcome to Our New Website!</h3>
+          <p class="w3-opacity">September 2024</p>
+          <p>Look around — you’re on our brand-new website! We’re proud to say that we built this entire site ourselves. And yes, it was challenging, but as programming enthusiasts, we figured we had to walk the walk, right? It’s been a fun (and sometimes frustrating) journey, but we’re thrilled with how it turned out.</p>
+
+<p>Take a tour, explore our content, and let us know what you think!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col l4 m12 w3-margin-bottom" style="display: inline-block; float: none; white-space: normal; vertical-align: top;">
+      <div class="w3-card">
+        <div class="w3-container">
+          <h3>Big News: We’re Going Offline!</h3>
+          <p class="w3-opacity">June 2024</p>
+          <p>We’re excited to announce that the next edition of our event will be the first to take place in person! After connecting through screens for so long, we’re looking forward to bringing everyone together in the same space for an even more immersive experience. We’re officially kicking off the countdown, and we can’t wait to see you all face-to-face.</p>
+
+<p>Details are coming soon — stay tuned!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col l4 m12 w3-margin-bottom" style="display: inline-block; float: none; white-space: normal; vertical-align: top;">
+      <div class="w3-card">
+        <div class="w3-container">
+          <h3>Second Edition Wrapped Up!</h3>
+          <p class="w3-opacity">June 2024</p>
+          <p>What a ride! We’ve just wrapped up the second edition of our event, and it was absolutely fantastic. We had the pleasure of meeting some incredible people, learning so much, and sharing unforgettable experiences. From top-notch experts to our amazing participants, everyone brought their A-game, and we couldn’t have asked for a better crew. Check it out <a href="#PREVIOUS EDITION">here</a> and <a href="https://sicss.io/2024/amu-law/" target="_blank">also here</a>.</p>
+
+<p>But the best part? We didn’t just learn and collaborate — we made friends for life. Stay tuned for more adventures to come!</p>
+        </div>
+      </div>
+    </div>
+   
+<hr>
+
+  </div>
+</div>
 
 <!-- About Section -->
 <div class="w3-container" style="padding:128px 16px" id="about">
@@ -104,6 +195,73 @@ body, html {
     </div>
   </div>
 </div>
+
+<!-- Our Sponsors section -->
+<div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
+<h2>Our Sponsors</h2>
+  <div class="w3-quarter">
+    <a href="https://sicss.io" target="_blank">
+  <img src="images/sicss.jpg" alt="SICSS" style="width:50%;"></a>
+    <br>SICSS
+  </div>
+  <div class="w3-quarter">
+    <a href="https://duke.edu" target="_blank">
+  <img src="images/duke.png" alt="Duke University" style="width:50%;"></a>
+    <br>Duke University
+  </div>
+  <div class="w3-quarter">
+    <a href="https://prawo.amu.edu.pl/en/" target="_blank">
+  <img src="images/fla.png" alt="Faculty of Law of Adam Mickiewicz University in Poznań" style="width:50%;"></a>
+    <br>Faculty of Law of Adam Mickiewicz University in Poznań
+  </div>
+  <div class="w3-quarter">
+    <a href="https://pol.is/home" target="_blank">
+  <img src="images/polis.png" alt="Pol.is" style="width:50%;"></a>
+    <br>Pol.is
+  </div>
+
+  <div class="w3-container" style="margin-top: 32px;">
+    <br>
+    <hr>
+    <button class="w3-button w3-light-grey w3-padding-large" style="display: inline-block;" onclick="showModal()">
+      Support us
+    </button>
+  </div>
+</div>
+
+<!-- Modal Window -->
+<div id="supportModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Thank You for Your Support!</h2>
+    <p>Your interest in supporting us means the world. For more details on how you can contribute, please reach out directly to our CEO or School Evangelist. They would love to hear from you!</p>
+    <ul>
+        <li>Paulina Klisowska (CEO), <a href="mailto:paukli3@st.amu.edu.pl">contact her via email</a></li>
+        <li>Łukasz Szoszkiewicz (School Evangelist), <a href="mailto:l.szoszkiewicz@amu.edu.pl">contact him via email</a></li>
+    </ul>
+    
+  </div>
+</div>
+
+<script>
+    // Function to open window
+    function showModal() {
+        document.getElementById("supportModal").style.display = "block";
+    }
+
+    // Function to close window
+    function closeModal() {
+        document.getElementById("supportModal").style.display = "none";
+    }
+
+    // Close window
+    window.onclick = function(event) {
+        var modal = document.getElementById("supportModal");
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
 
 
 <!-- Promo Section - "Our goal" -->
@@ -217,7 +375,7 @@ body, html {
         <img src="images/lukasz_szoszkiewicz.png" alt="Łukasz Szoszkiewicz" style="width:100%">
         <div class="w3-container">
           <h3>Łukasz Szoszkiewicz</h3>
-          <p class="w3-opacity">Founder, school evangelist</p>
+          <p class="w3-opacity">Founder, School Evangelist</p>
           <p>He introduced us to the spirit of collaboration and sharing, inspired by his time in Maastricht. A supportive and truly invaluable cornerstone of our team, always guiding us forward with wisdom and a sharp strategic mind.</p>
           <p><em>superpowers:</em> master of law, Ph.D., guardian, originator, strategist, basketball player<p/>
           <p><a href="https://lszoszk.github.io/sicss/news.html" class="w3-button w3-light-grey w3-block">
@@ -247,7 +405,7 @@ body, html {
         <img src="images/jedrzej_wydra.jpg" alt="Jędrzej Wydra" style="width:100%">
         <div class="w3-container">
           <h3>Jędrzej Wydra</h3>
-          <p class="w3-opacity">Head of technology</p>
+          <p class="w3-opacity">Head of Technology</p>
           <p>A bridge between two worlds, connecting them both because he’s part of each. His heart is with us in law, but his mind remains in mathematics.</p>
           <p><em>superpowers:</em> master of law, master of mathematics, data science, pathfinding, calisthenics<p/>
           <p><a href="https://jedrzej-wydra.github.io" class="w3-button w3-light-grey w3-block">
@@ -313,6 +471,7 @@ body, html {
       <p>Our events are more than just a school; they are marvelous opportunities to learn, network, and have fun.</p>
       <p>Concerned that your coding or math skills might not be enough? Don’t worry! We bring together both newbies and veterans, proving that everyone has something to learn from one another.</p>
       <p>The force will be with you.</p>
+      <p><a href="TA.html" class="w3-button w3-black"><i class="fa fa-th"> </i> Meet Our Teaching Assistants</a></p>
     </div>
     <div class="w3-col m6" style="text-align: justify;">
       <p class="w3-wide"><i class="fa-solid fa-school"></i>Amazingness of Learning Experience</p>
