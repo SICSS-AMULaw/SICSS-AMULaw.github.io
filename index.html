@@ -391,7 +391,7 @@ function closeLearnMoreModal() {
 <div class="w3-container" style="padding:128px 16px" id="team">
   <h3 class="w3-center">THE TEAM</h3>
   <p class="w3-center w3-large">The ones who runs this company</p>
-  <div class="w3-row-padding w3-grayscale" style="margin-top:64px; overflow-x: auto; white-space: nowrap;">
+  <div class="w3-row-padding w3-grayscale team-scroll" style="margin-top:64px; overflow-x: auto; white-space: nowrap;">
 
     <div class="w3-col l3 m6 w3-margin-bottom" style="display: inline-block; float: none; white-space: normal; vertical-align: top;">
       <div class="w3-card">
@@ -404,10 +404,11 @@ function closeLearnMoreModal() {
           <p><a href="https://paulinaklisowska.github.io" class="w3-button w3-light-grey w3-block">
              <i class="fa-solid fa-id-card"></i> More Details
              </a>
-</p> 
+          </p> 
         </div>
       </div>
     </div>
+
     <div class="w3-col l3 m6 w3-margin-bottom" style="display: inline-block; float: none; white-space: normal; vertical-align: top;">
       <div class="w3-card">
         <img src="images/lukasz_szoszkiewicz.png" alt="Łukasz Szoszkiewicz" style="width:100%">
@@ -419,10 +420,11 @@ function closeLearnMoreModal() {
           <p><a href="https://lszoszk.github.io/sicss/news.html" class="w3-button w3-light-grey w3-block">
              <i class="fa-solid fa-id-card"></i> More Details
              </a>
-</p> 
+          </p> 
         </div>
       </div>
     </div>
+
     <div class="w3-col l3 m6 w3-margin-bottom" style="display: inline-block; float: none; white-space: normal; vertical-align: top;">
       <div class="w3-card">
         <img src="images/wojciech_biernacki.jpg" alt="Wojciech Biernacki" style="width:100%">
@@ -434,10 +436,11 @@ function closeLearnMoreModal() {
           <p><a href="wbiernacki/index.html" class="w3-button w3-light-grey w3-block">
              <i class="fa-solid fa-id-card"></i> More Details
              </a>
-</p> 
+          </p> 
         </div>
       </div>
     </div>
+
     <div class="w3-col l3 m6 w3-margin-bottom" style="display: inline-block; float: none; white-space: normal; vertical-align: top;">
       <div class="w3-card">
         <img src="images/jedrzej_wydra.jpg" alt="Jędrzej Wydra" style="width:100%">
@@ -449,12 +452,40 @@ function closeLearnMoreModal() {
           <p><a href="https://jedrzej-wydra.github.io" class="w3-button w3-light-grey w3-block">
              <i class="fa-solid fa-id-card"></i> More Details
              </a>
-</p> 
+          </p> 
         </div>
       </div>
     </div>
+
   </div>
 </div>
+
+<style>
+/* Zawsze widoczny suwak tylko w sekcji TEAM */
+.team-scroll {
+    overflow-x: auto; /* Włącz przewijanie w poziomie */
+    white-space: nowrap; /* Zapobieganie łamaniu wierszy */
+    scrollbar-width: thin; /* Styl dla przeglądarek wspierających standardy (np. Firefox) */
+}
+
+.team-scroll::-webkit-scrollbar {
+    height: 8px; /* Wysokość paska przewijania */
+}
+
+.team-scroll::-webkit-scrollbar-thumb {
+    background: #888; /* Kolor uchwytu */
+    border-radius: 4px; /* Zaokrąglenie uchwytu */
+}
+
+.team-scroll::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Kolor uchwytu po najechaniu */
+}
+
+.team-scroll::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Kolor tła paska przewijania */
+}
+</style>
+
 
 <!-- PREVIOUS EDITION Section -->
 <div class="w3-container" style="padding:128px 16px" id="PREVIOUS EDITION">
