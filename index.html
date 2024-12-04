@@ -110,6 +110,8 @@ body, html {
     <span class="w3-xxlarge w3-hide-large w3-hide-medium">The Summer Institutes <br>in Computational Social Science</span><br>
     <span class="w3-large">organized by Adam Mickiewicz University in Poznań</span>
     <p><a href="https://github.com/SICSS-AMULaw" target=blank_ class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Explore Our GitHub Repo</a></p>
+    <p><a href="javascript:void(0);" onclick="showLearnMoreModal()" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more about the SICSS initiative</a>
+</p>
   </div> 
   <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
     <a href="https://www.facebook.com/people/SICSS-AMULaw-2024/61557991145761/" target="_blank">
@@ -118,6 +120,51 @@ body, html {
     <i class="fa-brands fa-linkedin"></i></a>
   </div>
 </header>
+
+<!-- New Modal Window -->
+<div id="learnMoreModal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <span class="close" onclick="closeLearnMoreModal()">&times;</span>
+    <h2>Learn More About SICSS</h2>
+    <p>The Summer Institutes in Computational Social Science (SICSS) are a global initiative, bringing together researchers and practitioners to explore cutting-edge computational methods. Originating at Duke University, SICSS has expanded to dozens of locations worldwide, including the only edition focusing on legal applications, hosted in Poznań, Poland.</p>
+    <ul>
+        <li><b>What to Expect:</b> <br>
+SICSS combines world-class lectures, practical workshops, and hands-on project development. Participants gain skills in computational tools like AI, text mining, and statistics, unlocking new possibilities in law and social sciences.</li>
+        <li><b>Why It’s Unique:</b> <br>
+In Poznań, SICSS focuses on applying computational methods to law, empowering researchers to innovate in areas such as justice systems, legal evidence, and public administration.</li>
+        <li><b>Global and Local Impact:</b> <br>
+SICSS connects participants from universities and public institutions across the globe, fostering collaboration and promoting Poznań as a hub of legal innovation.</li>
+    </ul>
+<p>Curious? Dive deeper into this transformative experience on <a href="https://sicss.io" target="_blank">the official SICSS website</a>
+</p>
+  </div>
+</div>
+
+<script>
+    // Close the "learn more" modal when clicking outside its content
+window.onclick = function(event) {
+    // Pobierz wszystkie elementy z klasą "modal"
+    var modals = document.querySelectorAll(".modal");
+
+    // Iteruj po znalezionych elementach modalnych
+    modals.forEach(function(modal) {
+        if (event.target === modal) {
+            modal.style.display = "none"; // Ukryj okno modalne
+        }
+    });
+};
+
+// Function to open the "learn more" modal
+function showLearnMoreModal() {
+    document.getElementById("learnMoreModal").style.display = "block";
+}
+
+// Function to close the "learn more" modal
+function closeLearnMoreModal() {
+    document.getElementById("learnMoreModal").style.display = "none";
+}
+
+</script>
 
 <!-- NEWS -->
 <div class="w3-container" style="padding:64px 16px 0px 16px" id="news">
@@ -233,7 +280,7 @@ body, html {
     <p>Your interest in supporting us means the world. For more details on how you can contribute, please reach out directly to our CEO or School Evangelist. They would love to hear from you!</p>
     <ul>
         <li>Paulina Klisowska (CEO), <a href="mailto:paukli3@st.amu.edu.pl">contact her via email</a></li>
-        <li>Łukasz Szoszkiewicz (School Evangelist), <a href="mailto:l.szoszkiewicz@amu.edu.pl">contact him via email</a></li>
+        <li>Igor Gontarz (Budget Manager), <a href="mailto:igor.gontarz@amu.edu.pl">contact him via email</a></li>
     </ul>
     
   </div>
@@ -250,13 +297,7 @@ body, html {
         document.getElementById("supportModal").style.display = "none";
     }
 
-    // Close window
-    window.onclick = function(event) {
-        var modal = document.getElementById("supportModal");
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
+    
 </script>
 
 
